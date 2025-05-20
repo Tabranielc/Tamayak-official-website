@@ -44,7 +44,8 @@ header::before {
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: 0;
-}header p {
+}
+header p {
   font-size: 1.25rem;
   margin-top: 1rem;
   animation: neonGlow 5s infinite alternate;

@@ -158,11 +158,21 @@ a {
   font-size: 2rem;
   animation: neonGlow 2s infinite alternate;
 }
-/* === Hide accessibility widget if present === */
+/* === Force-hide accessibility widget === */
 iframe[title*="accessibility"],
+iframe[src*="userway"],
+iframe[src*="equalweb"],
+iframe[src*="accessiBe"],
 div[id*="userway"],
-div[aria-label*="accessibility"],
+div[class*="userway"],
 div[class*="accessibility"],
-div[style*="z-index"][style*="right"] {
+div[id*="accessibility"],
+div[aria-label*="accessibility"],
+div[style*="z-index"][style*="right"],
+.widget-wrapper,
+#userwayAccessibilityIcon {
   display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }

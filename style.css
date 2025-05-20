@@ -158,3 +158,11 @@ a {
   font-size: 2rem;
   animation: neonGlow 2s infinite alternate;
 }
+/* === Hide accessibility widget if present === */
+iframe[title*="accessibility"],
+div[id*="userway"],
+div[aria-label*="accessibility"],
+div[class*="accessibility"],
+div[style*="z-index"][style*="right"] {
+  display: none !important;
+}

@@ -1,25 +1,28 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Poppins', sans-serif;
   background: #000;
   color: #fff;
 }
+
 @keyframes neonGlow {
   0% { color: #ff0000; text-shadow: 0 0 5px #ff0000, 0 0 20px #ff0000; }
   33% { color: #00ff00; text-shadow: 0 0 5px #00ff00, 0 0 20px #00ff00; }
   66% { color: #0000ff; text-shadow: 0 0 5px #0000ff, 0 0 20px #0000ff; }
   100% { color: #ff0000; text-shadow: 0 0 5px #ff0000, 0 0 20px #ff0000; }
 }
+
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
 @keyframes glitch {
   0% { transform: translate(0); }
   20% { transform: translate(-2px, 2px); }
@@ -28,6 +31,7 @@ body {
   80% { transform: translate(1px, -1px); }
   100% { transform: translate(0); }
 }
+
 header {
   background: url('images/header.jpg') center center / cover no-repeat,
               linear-gradient(-45deg, #ff0000, #00ff00, #0000ff, #ff0000);
@@ -38,6 +42,7 @@ header {
   text-align: center;
   position: relative;
 }
+
 header::before {
   content: '';
   position: absolute;
@@ -45,6 +50,7 @@ header::before {
   background: rgba(0, 0, 0, 0.5);
   z-index: 0;
 }
+
 .neon {
   font-size: 3rem;
   font-weight: 600;
@@ -52,6 +58,7 @@ header::before {
   position: relative;
   z-index: 1;
 }
+
 .neon::before {
   content: 'TAMAYAK';
   position: absolute;
@@ -62,6 +69,16 @@ header::before {
   z-index: -1;
   animation: glitch 1s infinite linear alternate-reverse;
 }
+
+/* Subheading under "TAMAYAK" */
+header p {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
 nav {
   display: flex;
   justify-content: center;
@@ -69,6 +86,7 @@ nav {
   background: #111;
   padding: 1rem;
 }
+
 nav a {
   color: #0ff;
   text-decoration: none;
@@ -76,9 +94,11 @@ nav a {
   position: relative;
   transition: all 0.2s ease;
 }
+
 nav a:hover {
   text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
 }
+
 nav a::after {
   content: attr(data-glitch);
   position: absolute;
@@ -90,14 +110,17 @@ nav a::after {
   opacity: 0.6;
   transform: translate(2px, 0);
 }
+
 nav a:hover::after {
   animation: glitch 0.3s infinite;
 }
+
 section {
   padding: 2rem;
   max-width: 800px;
   margin: auto;
 }
+
 iframe {
   width: 100%;
   max-width: 600px;
@@ -105,15 +128,18 @@ iframe {
   display: block;
   margin: 1rem auto;
 }
+
 footer {
   background: #111;
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
 }
+
 a {
   color: #0ff;
 }
+
 #loading-screen {
   position: fixed;
   top: 0;
@@ -126,6 +152,7 @@ a {
   align-items: center;
   z-index: 9999;
 }
+
 #loading-screen h1 {
   color: #0ff;
   font-size: 2rem;

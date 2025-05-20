@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -33,22 +34,9 @@ body {
 }
 
 header {
-  background: url('images/header.jpg') center center / cover no-repeat,
-              linear-gradient(-45deg, #ff0000, #00ff00, #0000ff, #ff0000);
-  background-blend-mode: overlay;
-  background-size: cover;
-  animation: gradientShift 15s ease infinite;
-  padding: 4rem 2rem;
+  background: url('header-bg.jpg') center/cover no-repeat;
+  padding: 5rem 2rem;
   text-align: center;
-  position: relative;
-}
-
-header::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 0;
 }
 
 .neon {
@@ -56,7 +44,6 @@ header::before {
   font-weight: 600;
   animation: neonGlow 5s infinite alternate;
   position: relative;
-  z-index: 1;
 }
 
 .neon::before {
@@ -68,15 +55,6 @@ header::before {
   opacity: 0.5;
   z-index: -1;
   animation: glitch 1s infinite linear alternate-reverse;
-}
-
-/* Subheading under "TAMAYAK" */
-header p {
-  font-size: 1.25rem;
-  margin-top: 1rem;
-  color: #fff;
-  position: relative;
-  z-index: 1;
 }
 
 nav {
@@ -105,7 +83,6 @@ nav a::after {
   left: 2px;
   top: 0;
   color: #f0f;
-  background: transparent;
   clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
   opacity: 0.6;
   transform: translate(2px, 0);
@@ -158,21 +135,9 @@ a {
   font-size: 2rem;
   animation: neonGlow 2s infinite alternate;
 }
-/* === Force-hide accessibility widget === */
-iframe[title*="accessibility"],
-iframe[src*="userway"],
-iframe[src*="equalweb"],
-iframe[src*="accessiBe"],
-div[id*="userway"],
-div[class*="userway"],
-div[class*="accessibility"],
-div[id*="accessibility"],
-div[aria-label*="accessibility"],
-div[style*="z-index"][style*="right"],
-.widget-wrapper,
-#userwayAccessibilityIcon {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
+
+
+section h2 {
+  color: #ff0044;
+  text-shadow: 0 0 5px #ff0044, 0 0 10px #ff0044, 0 0 20px #ff0044;
 }

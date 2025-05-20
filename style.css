@@ -29,14 +29,16 @@ body {
   100% { transform: translate(0); }
 }
 header {
-  background: url('images/header.jpg') center center / cover no-repeat,
-              linear-gradient(-45deg, #ff0000, #00ff00, #0000ff, #ff0000);
-  background-blend-mode: overlay;
-  background-size: cover;
+  background: 
+    linear-gradient(-45deg, #ff0000, #00ff00, #0000ff, #ff0000),
+    url('header.jpg') center center / cover no-repeat;
+  background-size: 600% 600%, cover;
   animation: gradientShift 15s ease infinite;
   padding: 4rem 2rem;
   text-align: center;
   position: relative;
+  background-blend-mode: overlay;
+}
 }
 header::before {
   content: '';
